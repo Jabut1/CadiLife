@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+#menu {
+    background-color: #6db5e6 ;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+}
+
+#menu ul li a {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px 100px;
+    display: inline-block;
+}
+
+#menu ul li a:hover {
+    background-color: #88bcdf;
+    transition: 0.5s all;
+    border-radius: 15px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #6db5e6;
+    padding: 0 50px;
+}
+
+.escrita {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+}
+table {
+    width: 100%; /* Define uma largura para a tabela */
+    max-width: 1100px; /* Largura máxima para responsividade */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    margin-bottom: 30px; /* Espaçamento abaixo da tabela */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil para a tabela */
+    background-color: #fff; /* Fundo branco para a tabela */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #DC143C; /* Cor de destaque para o cabeçalho da tabela, combinando com o menu */
+    color: white; /* Texto branco para contraste */
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas alternadas para melhor leitura */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Efeito hover nas linhas */
+}
+
+.dados{
+    background-color: rgb(133, 133, 133);
+    border: none;
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.botoes_dados {
+    max-width: 1100px; /* igual à largura da tabela */
+    margin: 0 auto; /* centraliza a div */
+    gap: 10px; /* espaço entre os botões */
+    margin-bottom: 30px; /* espaço abaixo */
+    
+}
+
+.botoes_dados a:hover{
+        background-color: rgb(85, 85, 85);
+        transition: 0.5s all;
+      }
+
+section {
+    margin-bottom: 25px;
+}
+
+section h2 {
+    font-size: 25px;
+    color: #000; /* Preto para os títulos das seções */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: disc; /* Marcadores de círculo padrão */
+    padding-left: 20px; /* Recuo para a lista */
+    margin-top: 0;
+}
+
+section ul li {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+
+h1.logo {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin: 0;
+        background: linear-gradient(to right, #005b96, #03396c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: 1px;
+        position: relative;
+        margin-top: 2px;
+      }
+      h1.logo span.life {
+        color: #4bb935;
+      }
+      h1.logo::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #0089e0, transparent);
+        border-radius: 2px;
+            }
+      /* Estilos para o logo */
+      .logo-container {
+         display: flex;
+     
+       
+         padding: 5px 10px;
+         width: fit-content;
+      }
+     
+     
+     
+      h1.logo {
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 700;
+         font-size: 24px;
+         margin: 0;
+         display: flex;
+         align-items: center;
+         position: relative;
+      }
+     
+      .cadi {
+         color: #005b96;
+         
+        }
+     
+      .life {
+         color: #4bb935;
+      }
+     
+      h1.logo::after {
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+     
+         position: absolute;
+         bottom: -3px;
+       
+      }
+     
+     
+     
+     
+     
+      .login-form {
+         display: flex;
+         flex-direction: column;
+      }
+     
+      .form-group {
+         margin-bottom: 15px;
+      }
+     
+      label {
+         display: block;
+         margin-bottom: 5px;
+         font-weight: bold;
+       
+      }
+.nova_altura{
+    width: 7%;
+    border-radius: 8px;
+    padding: 3px;
+    border: 1.5px solid #000000;
+}
+.botao_altura{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    text-decoration: none;
+    padding: 2px;
+    width: 6%;
+    border-radius: 10px;    
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+.botao_altura:hover{
+        background-color: rgb(85, 85, 85);
+        transition: 0.5s all;
+      }
+
+.resultado{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}

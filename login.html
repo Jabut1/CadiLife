@@ -1,0 +1,294 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tela de login</title>
+   <!-- Importando fonte Google -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+   <style>
+      body{
+        font-family: 'Montserrat', Arial, sans-serif;
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(to right, rgb(125, 202, 250) 63%, rgb(207, 227, 245) 25%);
+      }
+     
+      div.login-container{
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 13%;
+        left: 71%;
+        padding: 80px;
+        border-radius: 5%;
+        color: #ffff;
+      }
+     
+      input{
+        padding: 13px;
+        border: none;
+        outline: none;
+       
+      }
+     
+      button{
+        background-color: rgb(0, 149, 255);
+        border: none;
+        padding: 15px;
+        width: 96%;
+        border-radius: 10px;
+        color: white;
+        font-size: medium;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+     
+      button:hover{
+        background-color: deepskyblue;
+        animation-name: animation;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+     
+      /* Novo estilo para o logo CadiLife */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0 0 30px;
+      }
+     
+      .logo-icon {
+        display: flex;
+        margin-right: 10px;
+      }
+     
+      .logo-icon img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+      }
+     
+      h1.logo {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin: 0;
+        background: linear-gradient(to right, #005b96, #03396c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: 1px;
+        position: relative;
+      }
+     
+      h1.logo span.life {
+        color: #4bb935;
+        font-weight: 600;
+      }
+     
+      h1.logo::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #0089e0, transparent);
+        border-radius: 2px;
+      }
+     
+      /* Estilos para o carrossel */
+      .carousel-container {
+        position: absolute;
+        top: 13%;
+        left: 2%;
+        width: 60%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+     
+      .carousel {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        transition: transform 0.8s ease-in-out;
+        animation: carousel-animation 20s infinite;
+      }
+     
+      .carousel-slide {
+        width: 25%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+     
+      .carousel-slide:nth-child(1) {
+        background-image: url('imagen_real1.png');
+       
+      }
+     
+      .carousel-slide:nth-child(2) {
+        background-image: url('imagen_real2.png');
+      }
+     
+      .carousel-slide:nth-child(3) {
+        background-image: url('imagen_real3.png');
+      }
+     
+      .carousel-slide:nth-child(4) {
+        background-image: url('imagen_real4.png');
+      }
+     
+      .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+     
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+     
+      .indicator.active {
+        background-color: white;
+      }
+     
+      @keyframes carousel-animation {
+        0%, 20% {
+          transform: translateX(0);
+        }
+        25%, 45% {
+          transform: translateX(-25%);
+        }
+        50%, 70% {
+          transform: translateX(-50%);
+        }
+        75%, 95% {
+          transform: translateX(-75%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+     
+      /* Efeito de fade para as transições */
+      .carousel-slide {
+        opacity: 0.8;
+        transition: opacity 0.5s ease;
+      }
+     
+      .carousel-slide:hover {
+        opacity: 1;
+      }
+     
+      @keyframes animation {
+          0% {
+              transform: scale(1);
+          }
+          100% {
+              transform: scale(1.05);
+          }
+      }
+   </style>
+</head>
+<body>
+  <!-- Novo logo estilizado -->
+  <div class="logo-container">
+    <div class="logo-icon">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" fill="#0089e0" fill-opacity="0.2" stroke="#0089e0" stroke-width="2"/>
+        <path d="M20 10V30M10 20H30" stroke="#0089e0" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 20C10 13.3726 15.3726 8 22 8C28.6274 8 34 13.3726 34 20C34 26.6274 28.6274 32 22 32C15.3726 32 10 26.6274 10 20Z" fill="#005b96" fill-opacity="0.2" stroke="#005b96" stroke-width="2"/>
+        <path d="M15 20H29M22 13V27" stroke="#005b96" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1 class="logo">Cadi<span class="life">Life</span></h1>
+  </div>
+
+
+  <!-- Carrossel de fotos -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+      <div class="carousel-slide"></div>
+    </div>
+    <div class="carousel-indicators">
+      <div class="indicator active"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+  </div>
+
+  <form action="login.php" method="post">
+    <div class="login-container">
+      <h1>Login</h1>
+      <input type="text" id="email" name="email" placeholder="Email" >
+      <br>
+      <br>
+      <input type="password" id="senha" name="senha" placeholder="Senha">
+      <br>
+      <br>
+      <button type="submit" name="submit">Entrar</button>
+      <h5>Sua primeira vez?<a href="cadastro.html"><b>Cadastre-se</b></a></h5>
+
+    </div>
+  </form>
+  <script>
+    // Script para controlar os indicadores do carrossel
+    document.addEventListener('DOMContentLoaded', function() {
+      const indicators = document.querySelectorAll('.indicator');
+      const carousel = document.querySelector('.carousel');
+     
+      // Atualiza o indicador ativo a cada 5 segundos
+      let currentSlide = 0;
+      setInterval(() => {
+        indicators.forEach(ind => ind.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % 4;
+        indicators[currentSlide].classList.add('active');
+      }, 5000);
+     
+      // Permite clicar nos indicadores para mudar de slide
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          carousel.style.transform = `translateX(-${index * 25}%)`;
+          indicators.forEach(ind => ind.classList.remove('active'));
+          indicator.classList.add('active');
+          currentSlide = index;
+        });
+      });
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('erro')) {
+      const div = document.querySelector('div');
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = "Email ou senha incorretos.";
+      errorMessage.style.color = 'red';
+      errorMessage.style.marginTop = '10px';
+      div.appendChild(errorMessage);
+    }
+  </script>
+</body>
+</html>

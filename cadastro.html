@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--http://localhost/projeto/formulario/cadastro.html-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Coloca a fonte Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style_cadastro.css" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header">
+            <h2>Nova conta</h2>
+        </section>
+<!--Nome-->
+        <form id="cadastro" class="cadastro" method="POST" action="cadastro.php">
+            <div class="cadastro-content">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome..."/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+
+
+            <div class="cadastro-content">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome..."/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+           
+<!--Email-->
+            <div class="cadastro-content">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite o seu email..."/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+
+
+<!--Gênero-->
+            <div class="cadastro-content">
+                <label for="sexo">Sexo</label>
+                <select id="sexo" name="sexo">
+                    <option value="" hidden>Selecione...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+<!--Peso-->
+            <div class="cadastro-content">
+                <label for="altura">Altura (m)</label>
+                <input type="number" id="altura" name="altura" placeholder="Digite sua altura em metros..." min="0" max="200" step="0.01"/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+<!--Senha-->
+            <div class="cadastro-content">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha..."/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+<!--Confirmar senha-->
+            <div class="cadastro-content">
+                <label for="confirmar-senha">Confirme sua senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Digite sua senha novamente..."/>
+                <a>Aqui vai a mensagem de erro....</a>
+            </div>
+
+
+            <button type="submit" id="submit" name="submit">Cadastrar</button>
+
+
+        </form>
+
+
+    </div>
+
+
+    <script src="./scriptcadastro.js?v=2"></script>
+</body>
+</html>
+    

@@ -1,0 +1,92 @@
+/*Mexe na fonte e no texto do cadastro*/
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+    font-family: "Roboto";
+}
+/*Mexe no corpo inteiro da página*/
+body{
+    background-color:  #D3D3D3;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Cria uma caixa para o formulário*/
+.container{
+    background-color: #ffffff;
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: 0 3px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+/*Cria uma caixa separada para a "Nova Conta"*/
+.header{
+    background: linear-gradient(90deg, #DC143C 0%, #f8375e 100%);
+    padding: 24px;
+    text-align: center;
+    color: #FFF;
+}
+/*Afasta os textos da borda da caixa*/
+.cadastro{
+    padding: 18px;
+}
+
+.cadastro-content{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.cadastro-content label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+/*Mexe na caixa onde digita */
+.cadastro-content input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+}
+/*Mexe no select do gênero */
+.cadastro-content select {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+    background-color: #fff;
+}
+/*Mexe na mensagem de erro*/
+.cadastro-content a{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+/*Botão de cadastrar*/
+.cadastro button{
+    background-color: #dc143c;
+    color: #FFF;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cadastro-content.error input{
+    border-color: #ff3b25;
+}
+
+.cadastro-content.error a{
+    color: #ff3b25;
+    visibility: visible;
+}
+
